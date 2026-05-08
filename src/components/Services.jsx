@@ -1,44 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, MessageCircle, Network, Filter, Settings, HeadphonesIcon } from "lucide-react";
+import { Bot, MessageCircle, Network, Filter, Share2 } from "lucide-react";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI Automation",
-      description: "Automate repetitive workflows using AI-powered systems that learn and adapt.",
+      icon: <Filter className="w-6 h-6" />,
+      title: "AI Calling Agent Development",
+      description: "Smart voice agents for lead sorting, qualification, and automated follow-ups.",
+      link: "/services#ai-calling",
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "WhatsApp Automation",
-      description: "Instant notifications, support systems, and proactive client communication.",
+      icon: <Bot className="w-6 h-6" />,
+      title: "Automation",
+      description: "Automate repetitive workflows and data entry with intelligent systems that never sleep.",
+      link: "/services#automation",
     },
     {
       icon: <Network className="w-6 h-6" />,
-      title: "CRM Integration",
-      description: "Connect your tools, sync data, and centralize operations seamlessly.",
+      title: "AI Infrastructures",
+      description: "Connect your tools, sync data, and centralize operations seamlessly with AI.",
+      link: "/services#ai-infrastructures",
     },
     {
-      icon: <Filter className="w-6 h-6" />,
-      title: "AI Voice Calling",
-      description: "Smart voice agents for lead sorting, qualification, and automated follow-ups.",
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: "Messaging Automation",
+      description: "Instant notifications, support systems, and proactive client communication via WhatsApp & more.",
+      link: "/services#messaging-automation",
     },
     {
-      icon: <Settings className="w-6 h-6" />,
-      title: "Custom Workflows",
-      description: "Tailor-made automations perfectly adapted for your unique business needs.",
-    },
-    {
-      icon: <HeadphonesIcon className="w-6 h-6" />,
-      title: "AI Chatbots",
-      description: "Smart 24/7 assistants for your website and comprehensive customer support.",
+      icon: <Share2 className="w-6 h-6" />,
+      title: "Content & Social Automation",
+      description: "Trigger automated content creation and scheduled posting across all your social media platforms seamlessly.",
+      link: "/services#social-automation",
     },
   ];
 
   return (
-    <section id="services" className="py-24 relative">
+    <section id="services" className="py-24 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px]" />
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -47,32 +48,41 @@ export default function Services() {
             Intelligent Systems That <span className="text-gradient-primary">Scale</span>
           </h2>
           <p className="text-lg text-muted">
-            We build modular automation solutions designed to eliminate manual tasks and drive revenue.
+            We build high-performance AI and automation ecosystems designed to multiply your revenue and eliminate operational bottlenecks.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Slider Container */}
+        <div className="flex overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar gap-6 -mx-6 px-6 md:mx-0 md:px-0">
           {services.map((service, index) => (
-            <motion.div
+            <Link
+              href={service.link}
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="glass-card p-8 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors group relative overflow-hidden"
+              className="snap-center shrink-0 w-[85vw] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="w-14 h-14 rounded-xl bg-surface flex items-center justify-center text-primary mb-6 border border-white/5 group-hover:scale-110 group-hover:bg-primary/20 transition-all">
-                {service.icon}
-              </div>
-              
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-muted leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="glass-card h-full p-8 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors group relative overflow-hidden flex flex-col"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="w-14 h-14 rounded-xl bg-surface flex items-center justify-center text-primary mb-6 border border-white/5 group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-muted leading-relaxed flex-grow">
+                  {service.description}
+                </p>
+                <div className="mt-6 text-primary text-sm font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-2">
+                  Learn more &rarr;
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Zap, Maximize, Code2, Cpu, Wrench } from "lucide-react";
+import Image from "next/image";
 
 export default function WhyChooseUs() {
   const points = [
@@ -68,21 +69,14 @@ export default function WhyChooseUs() {
           
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-[2rem] blur-3xl" />
-            <div className="glass-card p-8 rounded-[2rem] relative z-10 border border-white/10 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-2xl" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/20 blur-2xl" />
-              
-              <div className="space-y-4 relative z-10">
-                {[1, 2, 3].map((_, i) => (
-                  <div key={i} className="bg-background/50 rounded-xl p-4 border border-white/5 flex items-center gap-4 animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}>
-                    <div className="w-10 h-10 rounded-full bg-white/10" />
-                    <div className="flex-1 space-y-2">
-                      <div className="h-2 w-1/3 bg-white/20 rounded" />
-                      <div className="h-2 w-1/2 bg-white/10 rounded" />
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="relative h-[400px] md:h-[600px] w-full rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+              <Image 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
+                alt="Our Team collaborating" 
+                fill 
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import ConsultationForm from "./ConsultationForm";
 
 export default function CTA() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/10" />
@@ -33,7 +36,10 @@ export default function CTA() {
               Book a free strategy call and discover exactly how automation can save you hundreds of hours and increase revenue.
             </p>
             
-            <button className="px-10 py-5 rounded-full bg-primary text-white text-lg font-bold flex items-center justify-center gap-3 mx-auto hover:bg-primary/90 transition-all shadow-[0_0_30px_rgba(124,58,237,0.5)] hover:shadow-[0_0_50px_rgba(124,58,237,0.8)] hover:-translate-y-1">
+            <button
+              onClick={() => setIsFormOpen(true)}
+              className="px-10 py-5 rounded-full bg-primary text-white text-lg font-bold flex items-center justify-center gap-3 mx-auto hover:bg-primary/90 transition-all shadow-[0_0_30px_rgba(124,58,237,0.5)] hover:shadow-[0_0_50px_rgba(124,58,237,0.8)] hover:-translate-y-1"
+            >
               Schedule A Call
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -44,6 +50,8 @@ export default function CTA() {
           </div>
         </motion.div>
       </div>
+
+      <ConsultationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </section>
   );
 }

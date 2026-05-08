@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export default function Portfolio() {
   const caseStudies = [
@@ -9,13 +10,13 @@ export default function Portfolio() {
       title: "E-commerce Automation",
       metrics: ["70% reduction in manual workload", "3x faster response time", "99% order accuracy"],
       features: ["Automated order tracking", "WhatsApp updates", "CRM integration"],
-      imageGradient: "from-blue-500/20 to-purple-500/20"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Real Estate Lead Routing",
       metrics: ["500+ hours saved monthly", "Zero missed leads", "40% conversion bump"],
       features: ["Instant qualification", "Automated scheduling", "Follow-up sequences"],
-      imageGradient: "from-emerald-500/20 to-teal-500/20"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -43,22 +44,9 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="glass-card rounded-3xl overflow-hidden group border border-white/5"
             >
-              <div className={`h-48 w-full bg-gradient-to-br ${study.imageGradient} flex items-center justify-center p-6 relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-50" />
-                <div className="relative z-10 w-full max-w-sm bg-surface/80 backdrop-blur-md rounded-xl p-4 border border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-500">
-                  <div className="flex justify-between items-center mb-3">
-                    <div className="text-xs font-mono text-muted">System Performance</div>
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full w-[85%] bg-primary" />
-                    </div>
-                    <div className="h-2 w-3/4 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full w-[92%] bg-secondary" />
-                    </div>
-                  </div>
-                </div>
+              <div className="h-64 w-full relative overflow-hidden">
+                <Image src={study.image} alt={study.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
               </div>
               
               <div className="p-8">

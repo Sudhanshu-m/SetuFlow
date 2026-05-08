@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Zap, Cpu, MessageSquare } from "lucide-react";
+import ConsultationForm from "./ConsultationForm";
 
 export default function Hero() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
       {/* Background Elements */}
@@ -27,7 +30,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
-              Stop Doing Repetitive Work. Let <span className="text-gradient-primary">AI Handle It.</span>
+              Automate The Boring. <span className="text-gradient-primary">Dominate Your Market.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted mb-8 leading-relaxed">
@@ -35,10 +38,13 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="px-8 py-4 rounded-full bg-primary text-white font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] group">
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="px-8 py-4 rounded-full bg-primary text-white font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] group"
+              >
                 Book Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
               <a href="#portfolio" className="px-8 py-4 rounded-full glass-card text-white font-semibold flex items-center justify-center gap-2 hover:bg-white/5 transition-all">
                 <Play className="w-5 h-5" />
                 View Our Work
@@ -51,7 +57,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative lg:h-[600px] w-full flex items-center justify-center"
+            className="relative mt-12 lg:mt-0 min-h-[400px] lg:min-h-0 lg:h-[600px] w-full flex items-center justify-center"
           >
             {/* Main Dashboard Card */}
             <div className="absolute z-20 w-full max-w-md glass-card rounded-2xl p-6 border border-white/10 shadow-2xl animate-float">
@@ -111,6 +117,8 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+      <ConsultationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </section>
   );
 }

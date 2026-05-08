@@ -13,7 +13,12 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: "SetuFlow | AI & Workflow Solutions",
-  description: "We build intelligent automation systems for businesses using AI, workflows, and custom automations to save time, reduce costs, and increase revenue.",
+  description: "We build intelligent automation systems designed to make your work easy, not to replace humans. Leverage AI to save time and reduce costs.",
+  icons: {
+    icon: "/new_logo.png",
+    shortcut: "/new_logo.png",
+    apple: "/new_logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

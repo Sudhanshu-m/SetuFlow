@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
 import BuildingBlocks from "@/components/BuildingBlocks";
 import Process from "@/components/Process";
@@ -16,7 +15,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col selection:bg-primary/30 selection:text-white">
       <Header />
       <Hero />
-      <SocialProof />
       <Services />
       <BuildingBlocks />
       <Process />
