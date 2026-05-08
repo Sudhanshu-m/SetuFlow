@@ -23,7 +23,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl font-heading font-bold mb-6">
                 We Build The <span className="text-gradient-primary">Future of Work</span>
               </h1>
               <p className="text-xl text-muted leading-relaxed">
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
           {/* Meet The Founders */}
           <div className="mb-24">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-16">
+            <h2 className="text-2xl md:text-4xl font-heading font-bold text-center mb-16">
               Meet The <span className="text-gradient-primary">Founders</span>
             </h2>
 

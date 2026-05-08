@@ -58,7 +58,7 @@ export default function BuildingBlocks() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-surface/50 border-y border-white/5">
+    <section className="py-16 relative overflow-hidden bg-surface/50 border-y border-white/5">
       {/* Background elements */}
       <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] mix-blend-screen" />
       <div className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] mix-blend-screen" />
@@ -69,7 +69,7 @@ export default function BuildingBlocks() {
             <Blocks className="w-4 h-4" />
             <span>The Building Blocks</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
             Laying The Foundation For <span className="text-gradient-primary">Every Industry</span>
           </h2>
           <p className="text-lg text-muted">

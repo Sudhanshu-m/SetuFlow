@@ -80,7 +80,7 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl font-heading font-bold mb-6">
                 Let's <span className="text-gradient-primary">Connect</span>
               </h1>
               <p className="text-lg text-muted mb-12 leading-relaxed">

@@ -26,10 +26,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">

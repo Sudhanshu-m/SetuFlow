@@ -8,7 +8,7 @@ import ConsultationForm from "./ConsultationForm";
 export default function CTA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-[120px]" />
       
@@ -18,7 +18,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 border border-white/20 shadow-2xl relative overflow-hidden"
+          className="max-w-3xl mx-auto glass-card rounded-[3rem] p-8 md:p-12 border border-white/20 shadow-2xl relative overflow-hidden"
         >
           {/* Animated background particles effect can go here, using a simple CSS gradient for now */}
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-30" />
@@ -28,7 +28,7 @@ export default function CTA() {
               <Sparkles className="w-8 h-8" />
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
               Ready To Automate Your <span className="text-gradient">Business?</span>
             </h2>
             

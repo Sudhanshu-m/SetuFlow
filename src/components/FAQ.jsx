@@ -39,12 +39,12 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 relative bg-surface/30 border-y border-white/5">
+    <section id="faq" className="py-16 relative bg-surface/30 border-y border-white/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
           
           <div className="lg:col-span-5">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
               People <span className="text-gradient">Mostly Ask</span>
             </h2>
             <p className="text-lg text-muted leading-relaxed mb-8">

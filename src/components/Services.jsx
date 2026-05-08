@@ -39,12 +39,12 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px]" />
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
             Intelligent Systems That <span className="text-gradient-primary">Scale</span>
           </h2>
           <p className="text-lg text-muted">

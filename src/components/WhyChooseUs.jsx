@@ -34,11 +34,11 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-24 border-y border-white/5 bg-surface/20">
+    <section className="py-16 border-y border-white/5 bg-surface/20">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
               Why Partner With <span className="text-gradient-primary">Us?</span>
             </h2>
             <p className="text-lg text-muted mb-8">

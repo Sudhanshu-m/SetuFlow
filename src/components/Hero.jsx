@@ -8,7 +8,7 @@ import ConsultationForm from "./ConsultationForm";
 export default function Hero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 pb-8 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-blob" />
       <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "2s" }} />
@@ -29,7 +29,7 @@ export default function Hero() {
               <span>Next-Gen Automation Agency</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
               Automate The Boring. <span className="text-gradient-primary">Dominate Your Market.</span>
             </h1>
             

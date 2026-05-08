@@ -27,10 +27,10 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-24 bg-surface/30 relative border-y border-white/5">
+    <section id="process" className="py-16 bg-surface/30 relative border-y border-white/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-heading font-bold mb-6">
             Our Simple <span className="text-gradient">4-Step Process</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">

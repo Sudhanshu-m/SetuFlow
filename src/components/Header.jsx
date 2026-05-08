@@ -31,25 +31,25 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative">
         <a href="/" className="flex items-center gap-2 group z-20">
-          <div className="relative w-64 md:w-80 h-16 md:h-20">
+          <div className="relative w-48 md:w-64 h-12 md:h-16">
             <Image src="/new_logo.png" alt="SetuFlow Logo" fill className="object-contain object-left" priority />
           </div>
         </a>
 
         <nav className="hidden lg:flex items-center gap-12 absolute left-1/2 -translate-x-1/2 z-10">
-          <a href="/" className={`group relative text-xl font-bold transition-all duration-300 ${isActive("/") ? "text-white" : "text-muted hover:text-white"}`}>
+          <a href="/" className={`group relative text-lg font-bold transition-all duration-300 ${isActive("/") ? "text-white" : "text-muted hover:text-white"}`}>
             Home
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive("/") ? "w-full" : "w-0 group-hover:w-full"}`}></span>
           </a>
-          <a href="/about" className={`group relative text-xl font-bold transition-all duration-300 ${isActive("/about") ? "text-white" : "text-muted hover:text-white"}`}>
+          <a href="/about" className={`group relative text-lg font-bold transition-all duration-300 ${isActive("/about") ? "text-white" : "text-muted hover:text-white"}`}>
             About Us
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive("/about") ? "w-full" : "w-0 group-hover:w-full"}`}></span>
           </a>
-          <a href="/services" className={`group relative text-xl font-bold transition-all duration-300 ${isActive("/services") ? "text-white" : "text-muted hover:text-white"}`}>
+          <a href="/services" className={`group relative text-lg font-bold transition-all duration-300 ${isActive("/services") ? "text-white" : "text-muted hover:text-white"}`}>
             Services
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive("/services") ? "w-full" : "w-0 group-hover:w-full"}`}></span>
           </a>
-          <a href="/contact" className={`group relative text-xl font-bold transition-all duration-300 ${isActive("/contact") ? "text-white" : "text-muted hover:text-white"}`}>
+          <a href="/contact" className={`group relative text-lg font-bold transition-all duration-300 ${isActive("/contact") ? "text-white" : "text-muted hover:text-white"}`}>
             Contact Us
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive("/contact") ? "w-full" : "w-0 group-hover:w-full"}`}></span>
           </a>
