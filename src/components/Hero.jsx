@@ -8,7 +8,7 @@ import ConsultationForm from "./ConsultationForm";
 export default function Hero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
-    <section className="relative min-h-screen flex items-center pt-16 pb-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-8 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-blob" />
       <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "2s" }} />

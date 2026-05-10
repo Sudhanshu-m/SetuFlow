@@ -17,6 +17,17 @@ export default function ConsultationForm({ isOpen, onClose }) {
   const [showThankYou, setShowThankYou] = useState(false);
   const [errors, setErrors] = useState({});
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
   // Generate random math captcha on mount and when modal opens
   useEffect(() => {
     if (isOpen) {
@@ -112,7 +123,7 @@ export default function ConsultationForm({ isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex min-h-screen items-center justify-center p-4 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -127,7 +138,7 @@ export default function ConsultationForm({ isOpen, onClose }) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative bg-surface border border-white/10 rounded-2xl p-8 w-full max-w-md shadow-2xl"
+            className="relative bg-surface border border-white/10 rounded-2xl p-8 w-full max-w-md max-h-[calc(100vh-2rem)] overflow-y-auto shadow-2xl"
           >
             {/* Close Button */}
             <button

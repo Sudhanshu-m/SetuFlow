@@ -34,6 +34,10 @@
   color-scheme: dark;
 }
 
+html {
+  touch-action: manipulation;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);
