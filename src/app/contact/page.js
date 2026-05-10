@@ -94,9 +94,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-sm text-muted mb-1">Email Us At</div>
-                    <a href="mailto:sudhanshu1439@gmail.com" className="text-xl font-semibold hover:text-primary transition-colors">
-                      sudhanshu1439@gmail.com
-                    </a>
+                    <div className="space-y-1">
+                      <a href="mailto:sudhanshu1439@gmail.com" className="text-xl font-semibold hover:text-primary transition-colors block">
+                        sudhanshu1439@gmail.com
+                      </a>
+                      <a href="mailto:dishaj644@gmail.com" className="text-xl font-semibold hover:text-primary transition-colors block">
+                        dishaj644@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
